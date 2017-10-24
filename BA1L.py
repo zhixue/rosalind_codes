@@ -1,4 +1,18 @@
-for line in open('rosalind_test.txt'):
-    st = line.rstrip()
-#acgt=8,4,2,1
-print(st.count('A')*8+st.count('C')*4+st.count('G')*2+st.count('T'))
+def patterntonumber(st):
+    d = {'A':0,'C':1,'G':2,'T':3}
+    result = 0
+    for k in range(len(st)):
+        result = 4 * result + d[st[k]]
+    return result
+
+with open('rosalind_ba1l.txt') as f:
+    i = 0
+    string = ''
+    for line in f:
+        i += 1
+        if i == 1:
+            string = line.rstrip()
+
+print(patterntonumber(string))
+
+

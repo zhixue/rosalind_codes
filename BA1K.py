@@ -1,4 +1,5 @@
 import itertools
+
 def match(s1,s2,mistake):
     mis = 0
     for k in range(len(s1)):
@@ -9,12 +10,11 @@ def match(s1,s2,mistake):
     return 1
 
 def count(string,pattern,mistake):
-    counter = 0
-    counter = sum([match(string[n:n+len(pattern)],pattern,mistake) for n in range(len(string)-len(pattern))])
-    return counter
+    return sum([match(string[n:n+len(pattern)],pattern,mistake) for n in range(len(string)-len(pattern)+1)])
 
 
-with open('rosalind_ba1i.txt') as f:
+
+with open('rosalind_ba1k.txt') as f:
     i = 0
     for line in f:
         i += 1
@@ -22,18 +22,12 @@ with open('rosalind_ba1i.txt') as f:
             string = line.rstrip()
         if i == 2:
             length = int(line.rstrip().split(' ')[0])
-            mis = int(line.rstrip().split(' ')[1])
 
 
 l = ['A','C','G','T']
 r1 = [''.join(x) for x in itertools.product(*[l] * int(length))]
 
-times = 0
+
 for one in r1:
-    temp = count(string,one,mis)
-    if temp >= times:
-        if temp > times:
-            print('\n')
-            print(temp,end = '\n')
-        times = temp
-        print(one,end = ' ')
+    temp = count(string,one,0)
+    print(temp,end=' ')

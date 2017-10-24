@@ -9,12 +9,14 @@ def match(s1,s2,mistake):
     return 1
 
 def count(string,pattern,mistake):
-    counter = 0
-    counter = sum([match(string[n:n+len(pattern)],pattern,mistake) for n in range(len(string)-len(pattern))])
-    return counter
+    return sum([match(string[n:n+len(pattern)],pattern,mistake) for n in range(len(string)-len(pattern))])
+
+def reverse(string):
+    return string[::-1].replace('C','g').replace('G','c').replace('T','a').replace('A','t').upper()
 
 
-with open('rosalind_ba1i.txt') as f:
+
+with open('rosalind_ba1j.txt') as f:
     i = 0
     for line in f:
         i += 1
@@ -30,7 +32,7 @@ r1 = [''.join(x) for x in itertools.product(*[l] * int(length))]
 
 times = 0
 for one in r1:
-    temp = count(string,one,mis)
+    temp = count(string,one,mis) + count(string,reverse(one),mis)
     if temp >= times:
         if temp > times:
             print('\n')
