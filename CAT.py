@@ -1,13 +1,33 @@
-def fun(x):
-    if x == 0:
+def complement(base1,base2):
+    d = {'A':'U','U':'A','C':'G','G':'C'}
+    if d[base1] == base2:
         return 1
     else:
-        return fun(x-1)*(4*x-2)/(x+1)
-seq = ''
-for line in open('rosalind_cat.txt'):
-    if line[0] != '>':
-        seq += line.rstrip()
-cg_n = seq.count('C')
-au_n = seq.count('A')
+        return 0
 
-print (fun(cg_n)*fun(au_n))%1000000
+def cat(seq,temp):
+    length = len(seq)
+    if length < 2:
+        return 1
+
+    if seq in temp:
+        return temp[seq]
+
+    counter = 0
+    for n in range(1,length,2):
+        if complement(seq[0],seq[n]):
+            counter += cat(seq[1:n],temp) * cat(seq[n+1:],temp)
+    temp[seq] = counter % 10**6
+    return temp[seq]
+
+
+with open('rosalind_cat.txt') as f:
+    rna = ''
+    for line in f:
+        if line.startswith('>'):
+            continue
+        else:
+            rna += line.rstrip()
+
+temp = {} # a dictonary store the value of the substring of rna
+print(cat(rna,temp))
