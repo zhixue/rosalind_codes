@@ -16,4 +16,4 @@ Algorithmic Heights | 21 | 34
 ***ALL*** | ***129*** | ***?***
 
 > This is the task which our teacher-Liu assigned. 
-> My codes are only suggestions,due to some of them were finished without my personal computer and lost.
+> My codes are only suggestions,but not the standard answers.
