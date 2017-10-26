@@ -8,9 +8,9 @@ My profile is [here](http://rosalind.info/users/Zhixue/).
 
 Location | Solved | Total
 ---|---|---
-Python Village | 6 | 6
+Python Village | 6(complete) | 6
 Bioinformatics Stronghold | 55 | 105
-Bioinformatics Armory | 16 | 16
+Bioinformatics Armory | 16(complete) | 16
 Bioinformatics Textbook Track | 31 | 124
 Algorithmic Heights | 21 | 34
 ***ALL*** | ***129*** | ***?***
