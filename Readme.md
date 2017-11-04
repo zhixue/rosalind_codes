@@ -11,9 +11,9 @@ Location | Solved | Total
 Python Village | 6(complete) | 6
 Bioinformatics Stronghold | 58 | 105
 Bioinformatics Armory | 16(complete) | 16
-Bioinformatics Textbook Track | 31 | 124
+Bioinformatics Textbook Track | 32 | 124
 Algorithmic Heights | 33 | 34
-***ALL*** | ***144*** | ***?***
+***ALL*** | ***145*** | ***?***
 
 > This is the task which our teacher-Liu assigned. 
 > My codes are only suggestions,but not the standard answers.
