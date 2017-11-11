@@ -9,11 +9,11 @@ My profile is [here](http://rosalind.info/users/Zhixue/).
 Location | Solved | Total
 ---|---|---
 Python Village | 6(complete) | 6
-Bioinformatics Stronghold | 60 | 105
+Bioinformatics Stronghold | 61 | 105
 Bioinformatics Armory | 16(complete) | 16
-Bioinformatics Textbook Track | 40 | 124
+Bioinformatics Textbook Track | 41 | 124
 Algorithmic Heights | 34(complete) | 34
-***ALL*** | ***156*** | ***?***
+***ALL*** | ***158*** | ***?***
 
 > This is the task which our teacher-Liu assigned. 
 > My codes are only suggestions,but not the standard answers.
